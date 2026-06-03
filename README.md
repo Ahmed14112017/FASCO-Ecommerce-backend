@@ -30,3 +30,40 @@ Prerequisites
 
 Node.js 18+
 MongoDB database (e.g. MongoDB Atlas)
+
+
+Installation
+bashgit clone https://github.com/Ahmed14112017/fasco-backend.git
+cd fasco-backend
+npm install
+
+Environment Variables
+Create a .env file in the root directory:
+
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_ACCESS_SECRET=your_access_token_secret
+JWT_REFRESH_SECRET=your_refresh_token_secret
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+PAYMOB_API_KEY=your_paymob_api_key
+CLIENT_URL=http://localhost:3000
+
+# Development
+npm run dev
+
+# Production build
+npm run build
+npm start
+
+src/
+├── modules/
+│   ├── auth/
+│   ├── user/
+│   ├── products/
+│   ├── categories/
+│   ├── cart/
+│   ├── wishlist/
+│   ├── orders/
+│   └── paymob/
+└── server.ts
