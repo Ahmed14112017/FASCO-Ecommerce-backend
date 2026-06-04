@@ -9,6 +9,7 @@ import categoryRoutes from "./modules/categories/category.routes";
 import paymobRoutes from "./modules/paymob/routes";
 import userRoutes from "./modules/user/user.routes";
 import wishlistRoutes from "./modules/wishlist/wishlist.routes";
+import reviewRoutes from "./modules/reviews/review.routes";
 
 // import stripeRoutes from "./modules/stripe/stripe.routes";
 
@@ -31,6 +32,7 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/paymob", paymobRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/wishlist", wishlistRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 // app.use("/api/stripe/webhook", express.raw({ type: "application/json" }));
 // app.use("/api/stripe", stripeRoutes);
