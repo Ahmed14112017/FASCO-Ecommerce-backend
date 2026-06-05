@@ -105,3 +105,12 @@ export const deleteAddress = async (req: any, res: Response) => {
     res.status(500).json({ message: "Error deleting address" });
   }
 };
+
+export const getAllUsers = async (req: Request, res: Response) => {
+  try {
+    const users = await User.find().select("-password").sort({ createdAt: -1 });
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching users" });
+  }
+};
